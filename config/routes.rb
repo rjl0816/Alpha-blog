@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  #make the root response the action home in pages controller
+  root 'pages#home'
+  # get method for about should response to about action in pages controller
+  get 'about', to: 'pages#about'
 end
