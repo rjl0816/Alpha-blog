@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   # get method for about should response to about action in pages controller
   get 'about', to: 'pages#about'
-  resources :articles, only: [:show]
+  resources :articles, only: [:index, :show]
 end
