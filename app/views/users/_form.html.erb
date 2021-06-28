@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-10">
+        <%= render 'layouts/errors', obj: @user %>
+        <%= form_with(model: @user, class:"shadow-lg p-1 bg-dark rounded", local: true) do |f| %>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="container mt-5">
+                        <div class="form-group row mb-5">
+                            <%= f.label :username, class: "col-2 col-form-label text-white" %>
+                            <div class="col-10">
+                                <%= f.text_field :username, class: "form-control", placeholder: "Enter a username" %>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-5">
+                            <%= f.label :email, class: "col-2 col-form-label text-white" %>
+                            <div class="col-10">
+                                <%= f.email_field :email, class: "form-control", placeholder: "Enter your email address" %>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <%= f.label :password, class: "col-2 col-form-label text-white" %>
+                            <div class="col-10">
+                                <%= f.password_field :password, class: "form-control", placeholder: "Choose a password" %>
+                            </div>
+                        </div>
+                        <div class="form-group row justify-content-center">
+                            <%= f.submit class: "btn btn-outline-light btn-lg"%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to 'Cancel', articles_path, class: "row justify-content-center mt-5 text-danger" %>
+    </div>
+</div>
+    
