@@ -4,7 +4,7 @@
     <% @articles.each do |article| %>
         <div class="card text-center mb-4 shadow-lg rounded">
             <div class="card-header font-italic">
-                by Ron Jeff
+                by <%= article.user.username %>
             </div>
             <div class="card-body">
                 <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-success" %></h5>
