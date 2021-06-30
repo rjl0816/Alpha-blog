@@ -3,7 +3,8 @@
 <div class="container">
     <div class="card text-center mb-4 shadow-lg rounded">
         <div class="card-header font-italic">
-            by <%= @article.user.username %>
+            by <%= @article.user.username %> 
+            <%= link_to gravatar_for(@article.user, size: 50), user_path(@article.user) %>
         </div>
         <div class="card-body">
             <div class="card-text text-left"><%= simple_format(@article.description) %></div>
